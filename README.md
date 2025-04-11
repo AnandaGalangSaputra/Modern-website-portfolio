@@ -1,6 +1,7 @@
 # 🚀 Modern Portfolio Website
 
 Portfolio website modern dengan custom cursor, animasi scroll, dan greeting responsif. Dibangun menggunakan HTML, CSS, JavaScript, dan berbagai library modern seperti Bootstrap 5, GSAP, dan AOS. 
+![alt text](https://github.com/AnandaGalangSaputra/Modern-website-portfolio/blob/master/Screenshoot/1.PNG?raw=true)
 
 ## ✨ Fitur
 
