@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/cursor.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <!-- start cursor -->
+    <div class="cursor" style="z-index: 999">
+        <div class="cursor__ball cursor__ball--big ">
+            <svg height="30" width="30">
+                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg>
+        </div>
+
+        <div class="cursor__ball cursor__ball--small">
+            <svg height="10" width="10">
+                <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <!-- End Progress  -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold hoverable" href="#">Hii ✋</a>
+            <button class="navbar-toggler hoverable" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active hoverable" href="#hero">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hoverable" href="#layanan">Layanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hoverable" href="#project">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hoverable" href="#about">Tentang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-color">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="hero-title"><br>
+                        Saya<span class="text-color">Galang</span>
+                    </h1>
+                    <p class="hero-text">Kami menyediakan solusi terbaik untuk kebutuhan digital Anda dengan desain yang
+                        minimalis dan modern.</p>
+                    <a href="#layanan" class="btn btn-dark btn-lg hoverable">Cari Tahu Lebih Lanjut</a>
+                    <div class="social-icons mt-4 d-flex justify-content-center justify-content-lg-start">
+                        <a href="#" class="me-3 text-dark fs-4 hoverable"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3 text-dark fs-4 hoverable"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="me-3 text-dark fs-4 hoverable"><i class="fab fa-github"></i></a>
+                        <a href="#" class="me-3 text-dark fs-4 hoverable"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" class="text-dark fs-4 hoverable"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center align-items-center mt-4 mt-lg-0">
+                    <img src="./Assets/lake-6016x6016-3768.jpg" data-aos="fade-left" alt="Hero Image"
+                        class="hero-image hoverable">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="statistics-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="statistics-item border-end">
+                        <h2 class="display-4 fw-bold" data-value="10000" data-suffix="+">0</h2>
+                        <p class="text-muted">Pengunjung Aktif</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="statistics-item border-end">
+                        <h2 class="display-4 fw-bold" data-value="500" data-suffix="+">0</h2>
+                        <p class="text-muted">Proyek Selesai</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="statistics-item">
+                        <h2 class="display-4 fw-bold" data-value="98" data-suffix="%">0</h2>
+                        <p class="text-muted">Klien Puas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+        class="services-section bg-color min-vh-100 d-flex flex-column align-items-center justify-content-center py-5 py-md-0"
+        id="layanan">
+        <div class="container my-4 my-md-0">
+            <div class="row text-center mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h2 class="fw-bold">Layanan Kami</h2>
+                    <p class="text-muted">Solusi digital terbaik untuk mengembangkan bisnis Anda</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card p-4 p-md-5 bg-white rounded-4 shadow-sm h-100 transition-hover hoverable">
+                        <i class="fas fa-laptop-code fs-2 text-primary mb-4"></i>
+                        <h4 class="fw-bold">Web Development</h4>
+                        <p class="text-muted">Website modern dan responsif dengan teknologi terkini untuk kebutuhan
+                            bisnis Anda. Kami membangun website yang cepat, aman, dan mudah dikelola.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card p-4 p-md-5 bg-white rounded-4 shadow-sm h-100 transition-hover hoverable">
+                        <i class="fas fa-mobile-alt fs-2 text-primary mb-4"></i>
+                        <h4 class="fw-bold">Mobile Apps</h4>
+                        <p class="text-muted">Aplikasi mobile yang intuitif dan performa tinggi untuk Android dan iOS.
+                            Dikembangkan dengan teknologi terbaru untuk pengalaman terbaik.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card p-4 p-md-5 bg-white rounded-4 shadow-sm h-100 transition-hover hoverable">
+                        <i class="fas fa-paint-brush fs-2 text-primary mb-4"></i>
+                        <h4 class="fw-bold">UI/UX Design</h4>
+                        <p class="text-muted">Desain antarmuka yang minimalis dan modern dengan pengalaman pengguna
+                            terbaik. Fokus pada kemudahan penggunaan dan estetika.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section py-5" id="project">
+        <div class="container">
+            <div class="row pb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h2 class="fw-bold text-start">Portofolio</h2>
+                    <p class="text-muted">Beberapa proyek terbaik yang telah kami kerjakan</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm h-100 hoverable">
+                        <img src="./Assets/lake-6016x6016-3768.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sistem Pengaduan Masyarakat</h5>
+                            <p class="card-text text-muted">Aplikasi web untuk mengelola pengaduan masyarakat dengan
+                                fitur
+                                pelaporan, tracking status, dan dashboard admin yang komprehensif.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary hoverable">Laravel</span>
+                                <span class="badge bg-secondary hoverable">Vue.js</span>
+                                <span class="badge bg-success hoverable">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm h-100 hoverable">
+                        <img src="./Assets/lake-6016x6016-3768.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sistem Monitoring Udara</h5>
+                            <p class="card-text text-muted">Sistem IoT untuk memantau kualitas udara secara real-time
+                                menggunakan sensor Arduino dengan visualisasi data yang interaktif.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary hoverable">Arduino</span>
+                                <span class="badge bg-secondary hoverable">IoT</span>
+                                <span class="badge bg-success hoverable">Sensor MQ135</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0 shadow-sm h-100 hoverable">
+                        <img src="./Assets/lake-6016x6016-3768.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sistem Peminjaman Buku</h5>
+                            <p class="card-text text-muted">Aplikasi desktop untuk manajemen perpustakaan dengan fitur
+                                peminjaman, pengembalian, dan katalog buku digital.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary hoverable">C#</span>
+                                <span class="badge bg-secondary hoverable">.NET</span>
+                                <span class="badge bg-success hoverable">SQL Server</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5" data-aos="fade-up" data-aos-delay="400">
+                <a href="#" class="btn btn-dark btn-lg hoverable">Project Lainnya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section py-5 bg-color mb-5">
+        <div class="container bg-light p-5 rounded-4" data-aos="fade-up">
+            <div class="row text-center mb-5">
+                <div class="col-12 d-flex flex-column align-items-start" data-aos="fade-right">
+                    <h2 class="fw-bold">Lokasi Kami</h2>
+                    <div class="divider bg-primary rounded-pill my-3" style="width: 100px; height: 4px;"></div>
+                    <p class="text-muted">Kunjungi kantor kami atau hubungi melalui kontak di bawah</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-7" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="map-container rounded-4 overflow-hidden shadow-sm h-100 hoverable">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4733.942630495683!2d110.40906074686424!3d-7.76240517111591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sid!2sid!4v1744334582574!5m2!1sid!2sid"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="contact-section p-4 h-100">
+                        <div class="contact-item mb-5 hoverable" data-aos="fade-left" data-aos-delay="200">
+                            <h5 class="fw-bold text-dark mb-3">Alamat</h5>
+                            <p class="text-muted mb-2">Mancasan kidul, Condongcatur, Sleman, Yogyakarta</p>
+                            <a href="#masih kosong niii" class="btn btn-outline-primary btn-sm hoverable">Lihat di
+                                Maps</a>
+                        </div>
+                        <div class="contact-item mb-5 hoverable" data-aos="fade-left" data-aos-delay="300">
+                            <h5 class="fw-bold text-dark mb-3">Telepon</h5>
+                            <p class="text-muted mb-2">+62 812345678</p>
+                            <a href="tel:+622112345678" class="btn btn-outline-primary btn-sm hoverable">Hubungi
+                                Kami</a>
+                        </div>
+                        <div class="contact-item hoverable" data-aos="fade-left" data-aos-delay="400">
+                            <h5 class="fw-bold text-dark mb-3">Email</h5>
+                            <p class="text-muted mb-2">Anandagalansaputra@gmail.com</p>
+                            <a href="mailto:Anandagalansaputra@gmail.com"
+                                class="btn btn-outline-primary btn-sm hoverable">Kirim Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-white py-5" id="about">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4">
+                    <h4 class="fw-bold mb-3 text-color hoverable">Galang.</h4>
+                    <p class="text-muted mb-0">Saya Menghadirkan solusi digital inovatif untuk masa depan yang lebih
+                        baik</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex flex-column">
+                        <h6 class="fw-bold mb-3">Menu Cepat</h6>
+                        <a href="#hero" class="text-decoration-none text-muted mb-2 hoverable">Beranda</a>
+                        <a href="#about" class="text-decoration-none text-muted mb-2 hoverable">Tentang</a>
+                        <a href="#layanan" class="text-decoration-none text-muted mb-2 hoverable">Layanan</a>
+                        <a href="#project" class="text-decoration-none text-muted hoverable">Portofolio</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="social-links d-flex flex-column align-items-start">
+                        <h6 class="fw-bold mb-3">Terhubung</h6>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-outline-dark rounded-circle hoverable"
+                                style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="#" class="btn btn-outline-dark rounded-circle hoverable"
+                                style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="#" class="btn btn-outline-dark rounded-circle hoverable"
+                                style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="btn btn-outline-dark rounded-circle hoverable"
+                                style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
+                                    class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="text-muted mb-0">&copy; 2025 Ananda Galang Saputra <i
+                            class="fas fa-heart text-danger hoverable"></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="/Javascript/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Konfigurasi AOS untuk animasi yang lebih halus
+        AOS.init({
+            duration: 600,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: false
+        });
+    </script>
+    <!-- End AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./Javascript/Cursor.js"></script>
+</body>
+
+</html>

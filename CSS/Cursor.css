@@ -1,0 +1,20 @@
+/* Cursor Styles */
+.cursor {
+    pointer-events: none;
+}
+
+.cursor__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    z-index: 99999;
+}
+
+.cursor__ball circle {
+    fill: #f7f8fa;
+}
+
+.hoverable:hover {
+    opacity: 0.8;
+}
